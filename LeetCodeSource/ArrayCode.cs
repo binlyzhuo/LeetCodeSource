@@ -177,5 +177,88 @@ namespace LeetCodeSource
 
             return lostInts;
         }
+
+        public int FindMaxConsecutiveOnes(int[] nums)
+        {
+            int count =0;
+            int maxCount = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == 1)
+                {
+                    count = count + 1;
+                }
+                else
+                {
+                    maxCount = maxCount >= count ? maxCount : count;
+                    count = 0;
+                }
+            }
+
+            return  maxCount >= count ? maxCount : count;
+        }
+
+        public int FindPairs(int[] nums, int k)
+        {
+            int mathCount = 0;
+            HashSet<int> hs = new HashSet<int>();
+            for (int i = 0; i < nums.Length - 1; i++)
+            {
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+                    int last = nums[j];
+                    
+                    if (Math.Abs(nums[i] - nums[j]) == k)
+                    {
+                        mathCount++;
+                    }
+                        
+                }
+            }
+
+            return mathCount;
+        }
+
+        public int FindLengthOfLCIS(int[] nums)
+        {
+            if (nums.Length == 0)
+                return 0;
+
+            int maxLen = 1;
+            int res = 1;
+            for (int i = 0; i < nums.Length-1; i++)
+            {
+                if (nums[i] - nums[i + 1] < 0)
+                {
+                    maxLen += 1;
+                }
+                else
+                {
+                    maxLen = 1;
+                }
+
+                res = res < maxLen ? maxLen : res;
+            }
+
+            return res;
+        }
+
+        public int MaximumProduct(int[] nums)
+        {
+            if (nums.Length < 3)
+                return 0;
+            int maxVal=int.MinValue;
+
+            for (int i = 0; i < nums.Length - 2; i++)
+            {
+                int temp = nums[i] * nums[i + 1] * nums[i + 2];
+                if (temp > maxVal)
+                {
+                    maxVal = temp;
+                }
+            }
+
+            return maxVal;
+        }
     }
 }

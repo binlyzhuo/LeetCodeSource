@@ -25,7 +25,17 @@ namespace LeetCodeSource
             int[] b1 = {1, 2, -2147483648};
             int tmax = arrayCode.ThirdMax(b1);
 
-    Console.ReadLine();
+            int[] b2 = { 1 };
+            int maxLength = arrayCode.FindMaxConsecutiveOnes(b2);
+
+
+            int[] b3 = {3, 1, 4, 1, 5};
+            int mathCount = arrayCode.FindPairs(b3, 2);
+
+            int[] b4 = {1,3,5,7 };
+            int maxLl = arrayCode.FindLengthOfLCIS(b4);
+
+            Console.ReadLine();
         }
 
         public static int[] TwoSum(int[] numbers, int target)
