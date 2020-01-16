@@ -200,23 +200,7 @@ namespace LeetCodeSource
 
         public int FindPairs(int[] nums, int k)
         {
-            int mathCount = 0;
-            HashSet<int> hs = new HashSet<int>();
-            for (int i = 0; i < nums.Length - 1; i++)
-            {
-                for (int j = i + 1; j < nums.Length; j++)
-                {
-                    int last = nums[j];
-                    
-                    if (Math.Abs(nums[i] - nums[j]) == k)
-                    {
-                        mathCount++;
-                    }
-                        
-                }
-            }
-
-            return mathCount;
+            return 0;
         }
 
         public int FindLengthOfLCIS(int[] nums)

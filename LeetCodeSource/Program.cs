@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LeetCodeSource.Array;
 
 namespace LeetCodeSource
 {
@@ -34,6 +35,10 @@ namespace LeetCodeSource
 
             int[] b4 = {1,3,5,7 };
             int maxLl = arrayCode.FindLengthOfLCIS(b4);
+
+            int[] b5 = { 0,0,1 };
+            ArrayCode283 code283 = new ArrayCode283();
+            code283.MoveZeroes(b5);
 
             Console.ReadLine();
         }
