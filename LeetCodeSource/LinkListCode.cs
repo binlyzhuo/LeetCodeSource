@@ -14,19 +14,19 @@ namespace LeetCodeSource
                 return head;
 
             var thisNode = head;
-            while (thisNode!=null&&thisNode.next != null)
+            while (thisNode != null && thisNode.next != null)
             {
                 ListNode next = thisNode.next;
                 if (thisNode.val == next.val)
                 {
                     thisNode.next = next.next;
-                    
+
                 }
                 else
                 {
                     thisNode = thisNode.next;
                 }
-                
+
             }
 
             return head;
@@ -37,6 +37,10 @@ namespace LeetCodeSource
     {
         public int val;
         public ListNode next;
-        public ListNode(int x) { val = x; }
+        public ListNode(int x)
+        {
+            val = x;
+            next = null;
+        }
     }
 }
