@@ -21,7 +21,11 @@ namespace LeetCodeSource
             int[] a1 = {1, 2, 3, 0, 0, 0};
             int[] a2 = { 2,5,6};
             arrayCode.Merge(a1,3,a2,3);
-            Console.ReadLine();
+
+            int[] b1 = {1, 2, -2147483648};
+            int tmax = arrayCode.ThirdMax(b1);
+
+    Console.ReadLine();
         }
 
         public static int[] TwoSum(int[] numbers, int target)

@@ -120,5 +120,62 @@ namespace LeetCodeSource
 
             return 0;
         }
+
+        public int ThirdMax(int[] nums)
+        {
+            int firstMax = int.MinValue;
+            int secondMax = int.MinValue;
+            int thirdMax = int.MinValue;
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] > firstMax)
+                    firstMax = nums[i];
+            }
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if(nums[i]==firstMax)
+                    continue;
+
+                if (nums[i] > secondMax)
+                    secondMax = nums[i];
+            }
+
+            int tCount = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == firstMax||nums[i]==secondMax)
+                    continue;
+
+                tCount++;
+                if (nums[i] > thirdMax)
+                    thirdMax = nums[i];
+            }
+
+            if (firstMax >int.MinValue&&secondMax>int.MinValue&&tCount>0)
+                return thirdMax;
+            return firstMax;
+        }
+
+        public IList<int> FindDisappearedNumbers(int[] nums)
+        {
+            HashSet<int> hs = new HashSet<int>();
+            IList<int> lostInts = new List<int>();
+            for (int i = 0; i < nums.Length; i++)
+            {
+                hs.Add(nums[i]);
+            }
+
+            for (int i = 1; i <= nums.Length; i++)
+            {
+                if (!hs.Contains(i))
+                {
+                    lostInts.Add(i);
+                }
+            }
+
+            return lostInts;
+        }
     }
 }
