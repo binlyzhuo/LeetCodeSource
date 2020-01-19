@@ -40,6 +40,9 @@ namespace LeetCodeSource
             ArrayCode283 code283 = new ArrayCode283();
             code283.MoveZeroes(b5);
 
+            int[] b6 = { 1,2,3,4};
+            ArrayCode56 code56 = new ArrayCode56();
+            int sum6 = code56.ArrayPairSum(b6);
             Console.ReadLine();
         }
 

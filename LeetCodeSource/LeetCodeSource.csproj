@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="ArrayCode.cs" />
     <Compile Include="Array\ArrayCode283.cs" />
+    <Compile Include="Array\ArrayCode56.cs" />
     <Compile Include="LinkListCode.cs" />
     <Compile Include="Math\MathSample1.cs" />
     <Compile Include="MinStack.cs" />
