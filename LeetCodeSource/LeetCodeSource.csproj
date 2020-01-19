@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayCode.cs" />
+    <Compile Include="Array\ArrayCode189.cs" />
     <Compile Include="Array\ArrayCode283.cs" />
     <Compile Include="Array\ArrayCode532.cs" />
     <Compile Include="Array\ArrayCode56.cs" />
