@@ -43,6 +43,10 @@ namespace LeetCodeSource
             int[] b6 = { 1,2,3,4};
             ArrayCode56 code56 = new ArrayCode56();
             int sum6 = code56.ArrayPairSum(b6);
+
+            ArrayCode532 code532 = new ArrayCode532();
+            int[] b7 = {1, 1, 1, 1};
+            int r7 = code532.FindPairs(b7, 0);
             Console.ReadLine();
         }
 

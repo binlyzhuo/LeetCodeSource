@@ -10,24 +10,21 @@ namespace LeetCodeSource.Array
     {
         public void MoveZeroes(int[] nums)
         {
+            int index = 0;
             for (int i = 0; i < nums.Length; i++)
             {
-                if (nums[i] == 0)
+                if (nums[i] != 0)
                 {
-                    
-                    int t = i;
-                    while (t<nums.Length-1)
-                    {
-                        int temp = nums[t];
-                        nums[t] = nums[t + 1];
-                        nums[t + 1] = temp;
-
-                        t++;
-                    }
+                    nums[index++] = nums[i];
                 }
+
             }
 
-            int count = nums.Length;
+            while (index < nums.Length)
+            {
+                nums[index++] = 0;
+
+            }
         }
     }
 }
